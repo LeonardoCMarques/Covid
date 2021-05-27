@@ -9,19 +9,7 @@ class TabelaNumCasosCovid(db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria(){
-        db.execSQL("CREATE TABLE " + NOME_TABELA + "(" +
-                BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                CAMPO_NOME + " TEXT NOT NULL, " +
-                CAMPO_IDADE+ " TEXT NOT NULL, " +
-                CAMPO_ID_NUM_CASOS_RECUPERADOS+ " INTEGER, " +
-                CAMPO_ID_NUM_VACINADOS + " INTEGER, " +
-                " FOREIGN KEY ("+ CAMPO_ID_NUM_CASOS_RECUPERADOS +") " +
-                " REFERENCES " + TabelaNumCasosRecuperados.NOME_TABELA +
-                " FOREIGN KEY ("+ CAMPO_ID_NUM_VACINADOS +") " +
-                " REFERENCES " + TabelaNumVacinados.NOME_TABELA +
-                ")"
-        )
-
+        db.execSQL("CREATE TABLE $NOME_TABELA ( ${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, $CAMPO_NOME TEXT NOT NULL, $CAMPO_DATA_DE_NASCIMENTO TEXT NOT NULL, $CAMPO_ID_NUM_CASOS_RECUPERADOS INTEGER, $CAMPO_ID_NUM_VACINADOS INTEGER, FOREIGN KEY ($CAMPO_ID_NUM_CASOS_RECUPERADOS) REFERENCES ${TabelaNumCasosRecuperados.NOME_TABELA}, FOREIGN KEY ($CAMPO_ID_NUM_VACINADOS) REFERENCES ${TabelaNumVacinados.NOME_TABELA} )" )
     }
 
     fun insert(values: ContentValues): Long {
@@ -49,7 +37,7 @@ class TabelaNumCasosCovid(db: SQLiteDatabase) {
 
     companion object{
         const val NOME_TABELA = "casosCovid"
-        const val CAMPO_IDADE = "idade"
+        const val CAMPO_DATA_DE_NASCIMENTO = "data_de_nascimento"
         const val CAMPO_NOME = "nome"
         const val CAMPO_ID_NUM_CASOS_RECUPERADOS = "id_num_casos_recuperados"
         const val CAMPO_ID_NUM_VACINADOS = "id_num_vacinados"
