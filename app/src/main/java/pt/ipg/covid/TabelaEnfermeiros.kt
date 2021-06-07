@@ -37,8 +37,8 @@ class TabelaEnfermeiros(db: SQLiteDatabase){
 
     companion object{
         const val NOME_TABELA = "enfermeiros"
-        const val CAMPO_DATA_DE_NASCIMENTO = "data_de_nascimento"
         const val CAMPO_NOME_ENFERMEIRO = "nome_do_enfermeiro"
+        const val CAMPO_DATA_DE_NASCIMENTO = "data_de_nascimento"
         const val CAMPO_SEXO = "sexo"
 
     }
