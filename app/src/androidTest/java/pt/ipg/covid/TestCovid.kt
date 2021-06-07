@@ -17,6 +17,7 @@ import org.junit.Before
 @RunWith(AndroidJUnit4::class)
 class TestBaseDados {
     private fun getAppContext() = InstrumentationRegistry.getInstrumentation().targetContext
+    private fun getBdCovidOpenHelper() = BdCovidOpenHelper(getAppContext())
 
     @Before
     fun apagaBaseDados(){
@@ -24,9 +25,8 @@ class TestBaseDados {
     }
 
     @Test
-    fun consegueAbrirBaseDados(){
-        val dbOpenHelper = BdCovidOpenHelper(getAppContext())
-        val db = dbOpenHelper.readableDatabase
+    fun consegueAbrirBaseDados() {
+        val db = getBdCovidOpenHelper().readableDatabase
         assert(db.isOpen)
         db.close()
     }
