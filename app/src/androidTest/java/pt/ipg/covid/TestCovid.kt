@@ -48,7 +48,19 @@ class TestBaseDados {
         return Enfermeiro.fromCursor(cursor)
     }
 
+    private fun getUtenteBaseDados(tabela: TabelaUtentes, id: Long): Utente {
+        val cursor = tabela.query(
+            TabelaUtentes.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf(id.toString()),
+            null, null, null
+        )
 
+        assertNotNull(cursor)
+        assert(cursor!!.moveToNext())
+
+        return Utente.fromCursor(cursor)
+    }
 
     @Before
     fun apagaBaseDados(){
@@ -75,5 +87,17 @@ class TestBaseDados {
         db.close()
     }
 
+    @Test
+    fun consegueInserirUtente() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaUtentes = TabelaUtentes(db)
+
+        val utente = Utente(nome ="Marcelo" , dataNascimento = "17-6-2001", sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
+        utente.id = insereUtente(tabelaUtentes, utente)
+
+        assertEquals(utente, getUtenteBaseDados(tabelaUtentes, utente.id))
+
+        db.close()
+    }
 
 }
