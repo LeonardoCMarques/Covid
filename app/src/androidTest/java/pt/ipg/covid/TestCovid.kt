@@ -27,6 +27,13 @@ class TestBaseDados {
         return id
     }
 
+    private fun insereUtente(tabela: TabelaUtentes, utente: Utente): Long {
+        val id = tabela.insert(utente.toContentValues())
+        assertNotEquals(-1, id)
+
+        return id
+    }
+
     private fun getEnfermeiroBaseDados(tabela: TabelaEnfermeiros, id: Long): Enfermeiro {
         val cursor = tabela.query(
             TabelaEnfermeiros.TODAS_COLUNAS,
@@ -40,6 +47,8 @@ class TestBaseDados {
 
         return Enfermeiro.fromCursor(cursor)
     }
+
+
 
     @Before
     fun apagaBaseDados(){
@@ -61,8 +70,10 @@ class TestBaseDados {
         val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = "6-12-2000", sexo = "masculino")
         enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
 
-       //assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
+       assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
 
         db.close()
     }
+
+
 }
