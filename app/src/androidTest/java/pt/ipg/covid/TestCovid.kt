@@ -27,8 +27,15 @@ class TestBaseDados {
         return id
     }
 
-    private fun insereUtente(tabela: TabelaUtentes, utente: Utente): Long {
+    private fun insereUtentes(tabela: TabelaUtentes, utente: Utente): Long {
         val id = tabela.insert(utente.toContentValues())
+        assertNotEquals(-1, id)
+
+        return id
+    }
+
+    private fun insereCuidados(tabela: TabelaCuidados, cuidados: Cuidados): Long {
+        val id = tabela.insert(cuidados.toContentValues())
         assertNotEquals(-1, id)
 
         return id
@@ -62,6 +69,20 @@ class TestBaseDados {
         return Utente.fromCursor(cursor)
     }
 
+    private fun getCuidadoBaseDados(tabela: TabelaCuidados, id: Long): Cuidados {
+        val cursor = tabela.query(
+            TabelaCuidados.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf(id.toString()),
+            null, null, null
+        )
+
+        assertNotNull(cursor)
+        assert(cursor!!.moveToNext())
+
+        return Cuidados.fromCursor(cursor)
+    }
+
     @Before
     fun apagaBaseDados(){
         getAppContext().deleteDatabase(BdCovidOpenHelper.NOME_BASE_DADOS)
@@ -88,14 +109,27 @@ class TestBaseDados {
     }
 
     @Test
-    fun consegueInserirUtente() {
+    fun consegueInserirUtentes() {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaUtentes = TabelaUtentes(db)
 
         val utente = Utente(nome ="Marcelo" , dataNascimento = "17-6-2001", sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
-        utente.id = insereUtente(tabelaUtentes, utente)
+        utente.id = insereUtentes(tabelaUtentes, utente)
 
         assertEquals(utente, getUtenteBaseDados(tabelaUtentes, utente.id))
+
+        db.close()
+    }
+
+    @Test
+    fun consegueInserirCuidados() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaCuidados = TabelaCuidados(db)
+
+        val cuidados = Cuidados(nome ="Marcelo" , ocupadas = "3", disponiveis = "0")
+        cuidados.id = insereCuidados(tabelaCuidados, cuidados)
+
+        assertEquals(cuidados, getCuidadoBaseDados(tabelaCuidados, cuidados.id))
 
         db.close()
     }

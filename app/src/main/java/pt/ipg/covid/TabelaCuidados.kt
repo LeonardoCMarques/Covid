@@ -26,11 +26,11 @@ class TabelaCuidados(db: SQLiteDatabase) {
 
     fun query(
         columns: Array<String>,
-        selection: String,
-        selectionArgs: Array<String>,
-        groupBy: String,
-        having: String,
-        orderBy: String
+        selection: String?,
+        selectionArgs: Array<String?>,
+        groupBy: String?,
+        having: String?,
+        orderBy: String?
     ): Cursor? {
         return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
@@ -42,5 +42,7 @@ class TabelaCuidados(db: SQLiteDatabase) {
         const val CAMPO_NOME_CUIDADO = "tipo_de_cuidado"
         const val CAMPO_CAMAS_OCUPADAS = "num_camas_ocupadas"
         const val CAMPO_CAMAS_DISPONIVEIS = "num_camas_disponiveis"
+
+        val TODAS_COLUNAS = arrayOf(BaseColumns._ID, CAMPO_NOME_CUIDADO, CAMPO_CAMAS_OCUPADAS, CAMPO_CAMAS_DISPONIVEIS)
     }
 }
