@@ -100,11 +100,61 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaEnfermeiros = TabelaEnfermeiros(db)
 
-        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = "6-12-2000", sexo = "masculino")
+        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = "6-12-1997", sexo = "masculino")
         enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
 
        assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
 
+        db.close()
+    }
+
+    @Test
+    fun consegueAlterarEnfermeiros() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaEnfermeiros = TabelaEnfermeiros(db)
+
+        val enfermeiro = Enfermeiro(nome = "Maria", dataNascimento = "7-2-2001", sexo = "feminino")
+        enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
+
+        enfermeiro.nome = "Maria"
+
+        val registosAlterados = tabelaEnfermeiros.update(
+            enfermeiro.toContentValues(),
+            "${BaseColumns._ID}=?",
+            arrayOf(enfermeiro.id.toString())
+        )
+
+        assertEquals(1, registosAlterados)
+        assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
+        db.close()
+    }
+
+    @Test
+    fun consegueEliminarEnfermeiros() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaEnfermeiros = TabelaEnfermeiros(db)
+
+        val enfermeiro = Enfermeiro(nome = "Maria", dataNascimento = "7-2-2001", sexo = "feminino")
+        enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
+
+        val registosEliminados = tabelaEnfermeiros.delete(
+            "${BaseColumns._ID}=?",
+            arrayOf(enfermeiro.id.toString())
+        )
+
+        assertEquals(1, registosEliminados)
+        db.close()
+    }
+
+    @Test
+    fun consegueLerEnfermeiros() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaEnfermeiros = TabelaEnfermeiros(db)
+
+        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = "6-12-1997", sexo = "masculino")
+        enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
+
+        assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
         db.close()
     }
 
@@ -122,6 +172,56 @@ class TestBaseDados {
     }
 
     @Test
+    fun consegueAlterarUtentes() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaUtentes = TabelaUtentes(db)
+
+        val utente = Utente(nome ="Diana" , dataNascimento = "13-1-2003", sexo = "feminino", servico_internamento ="infermaria", responsavel ="Miguel")
+        utente.id = insereUtentes(tabelaUtentes, utente)
+
+        utente.nome = "Diana"
+
+        val registosAlterados = tabelaUtentes.update(
+            utente.toContentValues(),
+            "${BaseColumns._ID}=?",
+            arrayOf(utente.id.toString())
+        )
+
+        assertEquals(1, registosAlterados)
+        assertEquals(utente, getUtenteBaseDados(tabelaUtentes, utente.id))
+        db.close()
+    }
+
+    @Test
+    fun consegueEliminarUtentes() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaUtentes = TabelaUtentes(db)
+
+        val utente = Utente(nome ="Diana" , dataNascimento = "13-1-2003", sexo = "feminino", servico_internamento ="infermaria", responsavel ="Miguel")
+        utente.id = insereUtentes(tabelaUtentes, utente)
+
+        val registosEliminados = tabelaUtentes.delete(
+            "${BaseColumns._ID}=?",
+            arrayOf(utente.id.toString())
+        )
+
+        assertEquals(1, registosEliminados)
+        db.close()
+    }
+
+    @Test
+    fun consegueLerUtentes() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaUtentes = TabelaUtentes(db)
+
+        val utente = Utente(nome ="Marcelo" , dataNascimento = "17-6-2001", sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
+        utente.id = insereUtentes(tabelaUtentes, utente)
+
+        assertEquals(utente, getUtenteBaseDados(tabelaUtentes, utente.id))
+        db.close()
+    }
+
+    @Test
     fun consegueInserirCuidados() {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaCuidados = TabelaCuidados(db)
@@ -131,6 +231,56 @@ class TestBaseDados {
 
         assertEquals(cuidados, getCuidadoBaseDados(tabelaCuidados, cuidados.id))
 
+        db.close()
+    }
+
+    @Test
+    fun consegueAlterarCuidados() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaCuidados = TabelaCuidados(db)
+
+        val cuidados = Cuidados(nome ="Diana" , ocupadas = "2", disponiveis = "1")
+        cuidados.id = insereCuidados(tabelaCuidados, cuidados)
+
+        cuidados.nome = "Diana"
+
+        val registosAlterados = tabelaCuidados.update(
+            cuidados.toContentValues(),
+            "${BaseColumns._ID}=?",
+            arrayOf(cuidados.id.toString())
+        )
+
+        assertEquals(1, registosAlterados)
+        assertEquals(cuidados, getCuidadoBaseDados(tabelaCuidados, cuidados.id))
+        db.close()
+    }
+
+    @Test
+    fun consegueEliminarCuidados() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaCuidados = TabelaCuidados(db)
+
+        val cuidados = Cuidados(nome ="Diana" , ocupadas = "2", disponiveis = "1")
+        cuidados.id = insereCuidados(tabelaCuidados, cuidados)
+
+        val registosEliminados = tabelaCuidados.delete(
+            "${BaseColumns._ID}=?",
+            arrayOf(cuidados.id.toString())
+        )
+
+        assertEquals(1, registosEliminados)
+        db.close()
+    }
+
+    @Test
+    fun consegueLerCuidados() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaCuidados = TabelaCuidados(db)
+
+        val cuidados = Cuidados(nome ="Marcelo" , ocupadas = "3", disponiveis = "0")
+        cuidados.id = insereCuidados(tabelaCuidados, cuidados)
+
+        assertEquals(cuidados, getCuidadoBaseDados(tabelaCuidados, cuidados.id))
         db.close()
     }
 
