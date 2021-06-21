@@ -100,7 +100,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaEnfermeiros = TabelaEnfermeiros(db)
 
-        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = "6-12-1997", sexo = "masculino")
+        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = 6121997, sexo = "masculino")
         enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
 
        assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
@@ -113,7 +113,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaEnfermeiros = TabelaEnfermeiros(db)
 
-        val enfermeiro = Enfermeiro(nome = "Maria", dataNascimento = "7-2-2001", sexo = "feminino")
+        val enfermeiro = Enfermeiro(nome = "Filipa", dataNascimento = 7022001, sexo = "feminino")
         enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
 
         enfermeiro.nome = "Maria"
@@ -134,7 +134,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaEnfermeiros = TabelaEnfermeiros(db)
 
-        val enfermeiro = Enfermeiro(nome = "Maria", dataNascimento = "7-2-2001", sexo = "feminino")
+        val enfermeiro = Enfermeiro(nome = "Maria", dataNascimento = 7022001, sexo = "feminino")
         enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
 
         val registosEliminados = tabelaEnfermeiros.delete(
@@ -151,7 +151,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaEnfermeiros = TabelaEnfermeiros(db)
 
-        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = "6-12-1997", sexo = "masculino")
+        val enfermeiro = Enfermeiro(nome = "Hugo", dataNascimento = 6121997,sexo = "masculino")
         enfermeiro.id = insereEnfermeiros(tabelaEnfermeiros, enfermeiro)
 
         assertEquals(enfermeiro, getEnfermeiroBaseDados(tabelaEnfermeiros, enfermeiro.id))
@@ -163,7 +163,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaUtentes = TabelaUtentes(db)
 
-        val utente = Utente(nome ="Marcelo" , dataNascimento = "17-6-2001", sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
+        val utente = Utente(nome ="Marcelo" , dataNascimento = 17062001, sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
         utente.id = insereUtentes(tabelaUtentes, utente)
 
         assertEquals(utente, getUtenteBaseDados(tabelaUtentes, utente.id))
@@ -176,7 +176,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaUtentes = TabelaUtentes(db)
 
-        val utente = Utente(nome ="Diana" , dataNascimento = "13-1-2003", sexo = "feminino", servico_internamento ="infermaria", responsavel ="Miguel")
+        val utente = Utente(nome ="Gabriela" , dataNascimento = 13012003, sexo = "feminino", servico_internamento ="infermaria", responsavel ="Miguel")
         utente.id = insereUtentes(tabelaUtentes, utente)
 
         utente.nome = "Diana"
@@ -197,7 +197,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaUtentes = TabelaUtentes(db)
 
-        val utente = Utente(nome ="Diana" , dataNascimento = "13-1-2003", sexo = "feminino", servico_internamento ="infermaria", responsavel ="Miguel")
+        val utente = Utente(nome ="Diana" , dataNascimento = 13012003, sexo = "feminino", servico_internamento ="infermaria", responsavel ="Miguel")
         utente.id = insereUtentes(tabelaUtentes, utente)
 
         val registosEliminados = tabelaUtentes.delete(
@@ -214,7 +214,7 @@ class TestBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaUtentes = TabelaUtentes(db)
 
-        val utente = Utente(nome ="Marcelo" , dataNascimento = "17-6-2001", sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
+        val utente = Utente(nome ="Marcelo" , dataNascimento = 17062001, sexo = "masculino", servico_internamento ="infermaria", responsavel ="Hugo")
         utente.id = insereUtentes(tabelaUtentes, utente)
 
         assertEquals(utente, getUtenteBaseDados(tabelaUtentes, utente.id))

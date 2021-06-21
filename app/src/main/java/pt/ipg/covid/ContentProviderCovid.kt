@@ -302,7 +302,7 @@ class ContentProviderCovid : ContentProvider() {
     }
 
     companion object {
-        private const val AUTHORITY = "pt.ipg.livros"
+        private const val AUTHORITY = "pt.ipg.covid"
 
         private const val ENFERMEIRO = "enfermeiro"
         private const val UTENTE = "utente"
@@ -319,8 +319,9 @@ class ContentProviderCovid : ContentProvider() {
         private const val UNICO_ITEM = "vnd.android.cursor.item"
 
         private val ENDERECO_BASE = Uri.parse("content://$AUTHORITY")
-        //public val ENDERECO_ENFERMEIRO = Uri.withAppendedPath(ENDERECO_BASE, ENFERMEIRO)
-        //public val ENDERECO_TABELA_UTENTE = Uri.withAppendedPath(ENDERECO_BASE, UTENTE)
+        val ENDERECO_TABELA_ENFERMEIRO = Uri.withAppendedPath(ENDERECO_BASE, ENFERMEIRO)
+        val ENDERECO_TABELA_UTENTE = Uri.withAppendedPath(ENDERECO_BASE, UTENTE)
+        val ENDERECO_TABELA_CUIDADO = Uri.withAppendedPath(ENDERECO_BASE, CUIDADO)
 
         private fun getUriMatcher() : UriMatcher {
             val uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
