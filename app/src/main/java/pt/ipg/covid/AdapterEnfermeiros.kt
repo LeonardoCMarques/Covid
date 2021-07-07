@@ -15,14 +15,42 @@ class AdapterEnfermeiros(val fragment: FirstFragment) : RecyclerView.Adapter<Ada
             notifyDataSetChanged()
         }
 
-    class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewNomeEnfermeiro)
         private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewIdade)
 
+        init {
+            itemView.setOnClickListener(this)
+        }
+
         fun atualizaEnfermeiros(enfermeiros: Enfermeiro) {
             textViewNomeEnfermeiros.text = enfermeiros.nome
             textViewIdade.text = enfermeiros.dataNascimento.toString()
+        }
+
+        /**
+         * Called when a view has been clicked.
+         *
+         * @param v The view that was clicked.
+         */
+        override fun onClick(v: View?) {
+            selecionado?.desSeleciona()
+            seleciona()
+        }
+
+        private fun seleciona() {
+            selecionado = this
+            itemView.setBackgroundResource(R.color.cor_selecao)
+        }
+
+        private fun desSeleciona() {
+            selecionado = null
+            itemView.setBackgroundResource(android.R.color.white)
+        }
+
+        companion object {
+            var selecionado : ViewHolderEnfermeiros? = null
         }
 
     }
