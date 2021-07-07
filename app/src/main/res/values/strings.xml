@@ -11,4 +11,6 @@
     <string name="titulo">Título</string>
     <string name="enfermeiro">Enfermeiro</string>
     <string name="data_de_nascimento">Idade</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
