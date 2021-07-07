@@ -10,6 +10,7 @@ import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import pt.ipg.covid.databinding.FragmentFirstBinding
 import pt.ipg.livros.ContentProviderCovid
@@ -20,6 +21,7 @@ import pt.ipg.livros.ContentProviderCovid
 class FirstFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
 
     private var _binding: FragmentFirstBinding? = null
+    private var adapterEnfermeiros : AdapterEnfermeiros? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -39,6 +41,9 @@ class FirstFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         super.onViewCreated(view, savedInstanceState)
 
         val recyclerViewEnfermeiros = view.findViewById<RecyclerView>(R.id.recyclerViewEnfermeiros)
+        adapterEnfermeiros = AdapterEnfermeiros()
+        recyclerViewEnfermeiros.adapter = adapterEnfermeiros
+        recyclerViewEnfermeiros.layoutManager = LinearLayoutManager(requireContext())
 
         LoaderManager.getInstance(this)
             .initLoader(ID_LOADER_MANAGER_EFERMEIRO, null, this)
