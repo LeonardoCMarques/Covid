@@ -19,12 +19,14 @@ class AdapterEnfermeiros(val fragment: FirstFragment) : RecyclerView.Adapter<Ada
 
         private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewNomeEnfermeiro)
         private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewIdade)
-
+        private lateinit var enfermeiros: Enfermeiro
         init {
             itemView.setOnClickListener(this)
         }
 
         fun atualizaEnfermeiros(enfermeiros: Enfermeiro) {
+            this.enfermeiros = enfermeiros
+
             textViewNomeEnfermeiros.text = enfermeiros.nome
             textViewIdade.text = enfermeiros.dataNascimento.toString()
         }
@@ -42,6 +44,7 @@ class AdapterEnfermeiros(val fragment: FirstFragment) : RecyclerView.Adapter<Ada
         private fun seleciona() {
             selecionado = this
             itemView.setBackgroundResource(R.color.cor_selecao)
+            DadosApp.enfermeiroSelecionado = enfermeiros
         }
 
         private fun desSeleciona() {
