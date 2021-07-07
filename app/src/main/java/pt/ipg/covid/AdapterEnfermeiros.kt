@@ -6,7 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterEnfermeiros(val fragment: FirstFragment,var cursor: Cursor? = null) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
+class AdapterEnfermeiros(val fragment: FirstFragment) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
+
+    public var cursor: Cursor? = null
+        get() = field
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
