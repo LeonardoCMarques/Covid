@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ListaEnfermeiroFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/ListaEnfermeiroFragment"
         android:name="pt.ipg.covid.ListaEnfermeiroFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/lista_enfermeiro_fragment_label"
         tools:layout="@layout/fragment_lista_enfermeiro">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/NovoEnfermeiroFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/NovoEnfermeiroFragment"
         android:name="pt.ipg.covid.NovoEnfermeiroFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/novo_enfermeiro_fragment_label"
         tools:layout="@layout/fragment_novo_enfermeiro">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/ListaEnfermeiroFragment" />
     </fragment>
 </navigation>

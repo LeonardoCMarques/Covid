@@ -12,7 +12,7 @@ import androidx.loader.content.Loader
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import pt.ipg.covid.databinding.FragmentFirstBinding
+import pt.ipg.covid.databinding.FragmentListaEnfermeiroBinding
 import pt.ipg.livros.ContentProviderCovid
 
 /**
@@ -20,7 +20,7 @@ import pt.ipg.livros.ContentProviderCovid
  */
 class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentListaEnfermeiroBinding? = null
     private var adapterEnfermeiros : AdapterEnfermeiros? = null
 
     // This property is only valid between onCreateView and
@@ -32,7 +32,7 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentListaEnfermeiroBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -47,6 +47,10 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
 
         LoaderManager.getInstance(this)
             .initLoader(ID_LOADER_MANAGER_EFERMEIRO, null, this)
+
+        fun navegaNovoEnfermeiro() {
+            findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+        }
     }
 
     override fun onDestroyView() {
