@@ -12,4 +12,7 @@
     <string name="novo_enfermeiro">Novo enfermeiro</string>
     <string name="alterar_enfermeiro">Alterar enfermeiro</string>
     <string name="eliminar_enfermeiro">Eliminar enfermeiro</string>
+    <string name="titulo">Título</string>
+    <string name="enfermeiro">Enfermeiro</string>
+    <string name="data_de_nascimento">Idade</string>
 </resources>

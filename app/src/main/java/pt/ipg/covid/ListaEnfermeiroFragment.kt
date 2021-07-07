@@ -18,7 +18,7 @@ import pt.ipg.livros.ContentProviderCovid
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
+class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
 
     private var _binding: FragmentFirstBinding? = null
     private var adapterEnfermeiros : AdapterEnfermeiros? = null

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterEnfermeiros(val fragment: FirstFragment) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
+class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
 
     public var cursor: Cursor? = null
         get() = field
