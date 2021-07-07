@@ -23,6 +23,8 @@ class NovoEnfermeiroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        DadosApp.novoEnfermeiroFragment = this
+        (activity as MainActivity).menuAtual = R.menu.menu_novo_enfermeiro
 
         _binding = FragmentNovoEnfermeiroBinding.inflate(inflater, container, false)
         return binding.root
