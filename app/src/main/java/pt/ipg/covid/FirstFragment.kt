@@ -10,6 +10,7 @@ import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import pt.ipg.covid.databinding.FragmentFirstBinding
 import pt.ipg.livros.ContentProviderCovid
 
@@ -36,6 +37,8 @@ class FirstFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val recyclerViewEnfermeiros = view.findViewById<RecyclerView>(R.id.recyclerViewEnfermeiros)
 
         LoaderManager.getInstance(this)
             .initLoader(ID_LOADER_MANAGER_EFERMEIRO, null, this)
