@@ -3,11 +3,20 @@ package pt.ipg.covid
 import android.database.Cursor
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class AdapterEnfermeiros(val fragment: FirstFragment,var cursor: Cursor? = null) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
 
     class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewNomeEnfermeiro)
+        private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewIdade)
+
+        fun atualizaEnfermeiros(enfermeiros: Enfermeiro) {
+            textViewNomeEnfermeiros.text = enfermeiros.nome
+            textViewIdade.text = enfermeiros.dataNascimento.toString()
+        }
 
     }
 
@@ -62,7 +71,8 @@ class AdapterEnfermeiros(val fragment: FirstFragment,var cursor: Cursor? = null)
      * @param position The position of the item within the adapter's data set.
      */
     override fun onBindViewHolder(holder: ViewHolderEnfermeiros, position: Int) {
-        TODO("Not yet implemented")
+        cursor!!.moveToPosition(position)
+        holder.atualizaEnfermeiros(Enfermeiro.fromCursor(cursor!!))
     }
 
     /**
