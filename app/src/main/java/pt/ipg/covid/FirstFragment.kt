@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.loader.app.LoaderManager
+import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import androidx.navigation.fragment.findNavController
 import pt.ipg.covid.databinding.FragmentFirstBinding
+import pt.ipg.livros.ContentProviderCovid
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -55,7 +57,13 @@ class FirstFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
      * @return Return a new Loader instance that is ready to start loading.
      */
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<Cursor> {
-        TODO("Not yet implemented")
+        return CursorLoader(
+            requireContext(),
+            ContentProviderCovid.ENDERECO_TABELA_ENFERMEIRO,
+            TabelaEnfermeiros.TODAS_COLUNAS,
+            null, null,
+            TabelaEnfermeiros.CAMPO_NOME_ENFERMEIRO
+        )
     }
 
     /**
