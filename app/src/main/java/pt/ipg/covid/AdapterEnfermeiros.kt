@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterEnfermeiros(var cursor: Cursor? = null) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
+class AdapterEnfermeiros(val fragment: FirstFragment,var cursor: Cursor? = null) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
 
     class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -35,7 +35,9 @@ class AdapterEnfermeiros(var cursor: Cursor? = null) : RecyclerView.Adapter<Adap
      * @see .onBindViewHolder
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderEnfermeiros {
-        TODO("Not yet implemented")
+        val itemEnfermeiros = fragment.layoutInflater.inflate(R.layout.item_enfermeiros, parent, false)
+
+        return ViewHolderEnfermeiros(itemEnfermeiros)
     }
 
     /**
@@ -70,6 +72,7 @@ class AdapterEnfermeiros(var cursor: Cursor? = null) : RecyclerView.Adapter<Adap
      */
     override fun getItemCount(): Int {
         return cursor?.count ?: 0
+
     }
 
 }
