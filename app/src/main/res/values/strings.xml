@@ -13,4 +13,5 @@
     <string name="data_de_nascimento">Idade</string>
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="versao">Enfermeiros v. 1.0</string>
 </resources>

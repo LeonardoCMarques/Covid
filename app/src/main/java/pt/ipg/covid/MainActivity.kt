@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import pt.ipg.covid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -60,16 +61,19 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else ->  {
-                if (DadosApp.listaEnfermeiroFragment!!.processaOpcaoMenu(item)) {
-                    return true
-                } else {
-                    return super.onOptionsItemSelected(item)
-                }
+        val opcaoProcessada = when (item.itemId) {
+            R.id.action_settings -> {
+                Toast.makeText(this, R.string.versao, Toast.LENGTH_LONG).show()
+                true
+            }
+
+            else -> when(menuAtual) {
+                R.menu.menu_lista_enfermeiros -> DadosApp.listaEnfermeiroFragment!!.processaOpcaoMenu(item)
+                R.menu.menu_novo_enfermeiro -> DadosApp.novoEnfermeiroFragment!!.processaOpcaoMenu(item)
+                else -> false
             }
         }
+        return if(opcaoProcessada) true else super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {
