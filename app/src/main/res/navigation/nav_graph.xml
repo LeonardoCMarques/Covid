@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_lista_enfermeiro">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment"
             app:destination="@id/NovoEnfermeiroFragment" />
     </fragment>
     <fragment

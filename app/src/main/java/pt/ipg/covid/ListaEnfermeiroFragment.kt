@@ -4,6 +4,7 @@ import android.database.Cursor
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.loader.app.LoaderManager
@@ -31,6 +32,7 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        DadosApp.listaEnfermeiroFragment = this
 
         _binding = FragmentListaEnfermeiroBinding.inflate(inflater, container, false)
         return binding.root
@@ -47,10 +49,27 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
 
         LoaderManager.getInstance(this)
             .initLoader(ID_LOADER_MANAGER_EFERMEIRO, null, this)
+    }
+    fun navegaNovoEnfermeiro() {
+        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+    }
+    fun navegaAlterarEnfermeiro() {
+        //todo: navegar para o fragmento da edição de um enfermeiro
+    }
 
-        fun navegaNovoEnfermeiro() {
-            findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+    fun navegaEliminarEnfermeiro() {
+        //todo: navegar para o fragmento para confirmar eliminação de um enfermeiro
+    }
+
+    fun processaOpcaoMenu(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_novo_enfermeiro -> navegaNovoEnfermeiro()
+            R.id.action_alterar_enfermeiro -> navegaAlterarEnfermeiro()
+            R.id.action_eliminar_enfermeiro -> navegaEliminarEnfermeiro()
+            else -> return false
         }
+
+        return true
     }
 
     override fun onDestroyView() {
