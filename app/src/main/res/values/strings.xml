@@ -9,9 +9,11 @@
     <string name="alterar_enfermeiro">Alterar enfermeiro</string>
     <string name="eliminar_enfermeiro">Eliminar enfermeiro</string>
     <string name="titulo">Título</string>
-    <string name="enfermeiro">Enfermeiro</string>
+    <string name="enfermeiro">Nome</string>
     <string name="data_de_nascimento">Idade</string>
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
     <string name="versao">Enfermeiros v. 1.0</string>
+    <string name="idade">Idade</string>
+    <string name="sexo">Sexo</string>
 </resources>

@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Spinner
 import androidx.navigation.fragment.findNavController
 import pt.ipg.covid.databinding.FragmentNovoEnfermeiroBinding
 
@@ -15,6 +17,10 @@ import pt.ipg.covid.databinding.FragmentNovoEnfermeiroBinding
 class NovoEnfermeiroFragment : Fragment() {
 
     private var _binding: FragmentNovoEnfermeiroBinding? = null
+
+    private lateinit var editTextNome: EditText
+    private lateinit var editTextIdade: EditText
+    private lateinit var editTextSexo: EditText
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -34,6 +40,10 @@ class NovoEnfermeiroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        editTextNome = view.findViewById(R.id.editTextEnfermeiroNome)
+        editTextIdade = view.findViewById(R.id.editTextEnfermeiroIdade)
+        editTextSexo = view.findViewById(R.id.editTextEnfermeiroSexo)
     }
 
     override fun onDestroyView() {

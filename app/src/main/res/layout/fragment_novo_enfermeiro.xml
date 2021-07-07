@@ -11,25 +11,35 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEnfermeiro"
+            android:id="@+id/editTextEnfermeiroNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margem_campos"
             android:hint="@string/enfermeiro"
             android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_campos"
-            android:text="@string/data_de_nascimento" />
-
-        <Spinner
-            android:id="@+id/spinnerCategorias"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_campos" />
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEnfermeiroIdade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/idade" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEnfermeiroSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sexo" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>
