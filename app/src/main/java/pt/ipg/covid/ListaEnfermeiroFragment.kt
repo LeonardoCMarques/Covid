@@ -58,7 +58,7 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
     }
 
     fun navegaEliminarEnfermeiro() {
-        //todo: navegar para o fragmento para confirmar eliminação de um enfermeiro
+        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
     }
 
     fun processaOpcaoMenu(item: MenuItem): Boolean {

@@ -5,6 +5,7 @@
     <string name="lista_enfermeiro_fragment_label">Enfermeiro</string>
     <string name="novo_enfermeiro_fragment_label">Novo enfermeiro</string>
     <string name="edita_enfermeiro_fragment_label">Editar enfermeiro</string>
+    <string name="elimina_enfermeiro_fragment_label">Eliminar enfermeiro?</string>
 
 
     <string name="novo_enfermeiro">Novo enfermeiro</string>

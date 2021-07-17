@@ -43,5 +43,5 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margem_campos" />
     </com.google.android.material.textfield.TextInputLayout>
-</com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
