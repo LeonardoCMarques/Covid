@@ -60,18 +60,21 @@ class NovoEnfermeiroFragment : Fragment() {
         val nomeEnfermeiro = editTextNome.text.toString()
         if (nomeEnfermeiro.isEmpty()) {
             editTextNome.setError(getString(R.string.preencha_nome))
+            editTextNome.requestFocus()
             return
         }
 
         val idadeEnfermeiro = editTextIdade.text.toString()
         if (idadeEnfermeiro.isEmpty()) {
             editTextIdade.setError(getString(R.string.preencha_idade))
+            editTextIdade.requestFocus()
             return
         }
 
         val sexoEnfermeiro = editTextSexo.text.toString()
         if (sexoEnfermeiro.isEmpty()) {
             editTextSexo.setError(getString(R.string.preencha_sexo))
+            editTextSexo.requestFocus()
             return
         }
 
