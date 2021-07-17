@@ -68,8 +68,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             else -> when(menuAtual) {
-                R.menu.menu_lista_enfermeiros -> DadosApp.listaEnfermeiroFragment!!.processaOpcaoMenu(item)
-                R.menu.menu_novo_enfermeiro -> DadosApp.novoEnfermeiroFragment!!.processaOpcaoMenu(item)
+                R.menu.menu_lista_enfermeiros -> (DadosApp.fragment as ListaEnfermeiroFragment).processaOpcaoMenu(item)
+                R.menu.menu_novo_enfermeiro -> (DadosApp.fragment as NovoEnfermeiroFragment).processaOpcaoMenu(item)
+                R.menu.menu_edita_enfermeiro -> (DadosApp.fragment as EditaEnfermeiroFragment).processaOpcaoMenu(item)
                 else -> false
             }
         }

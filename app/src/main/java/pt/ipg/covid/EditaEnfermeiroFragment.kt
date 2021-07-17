@@ -3,6 +3,7 @@ package pt.ipg.covid
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 
@@ -29,7 +30,9 @@ class EditaEnfermeiroFragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_edita_enfermeiro, container, false)
     }
-
+    fun processaOpcaoMenu(item: MenuItem): Boolean {
+        return false
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -37,7 +40,7 @@ class EditaEnfermeiroFragment {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment EditaLivroFragment.
+         * @return A new instance of fragment EditaEnfermeiroFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic

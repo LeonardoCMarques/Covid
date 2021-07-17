@@ -32,7 +32,7 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        DadosApp.listaEnfermeiroFragment = this
+        DadosApp.fragment = this
         (activity as MainActivity).menuAtual = R.menu.menu_lista_enfermeiros
         _binding = FragmentListaEnfermeiroBinding.inflate(inflater, container, false)
         return binding.root
