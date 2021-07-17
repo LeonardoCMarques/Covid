@@ -10,9 +10,9 @@
     <string name="novo_enfermeiro">Novo enfermeiro</string>
     <string name="alterar_enfermeiro">Alterar enfermeiro</string>
     <string name="eliminar_enfermeiro">Eliminar enfermeiro</string>
-    <string name="titulo">Título</string>
     <string name="enfermeiro">Nome</string>
     <string name="data_de_nascimento">Idade</string>
+    <string name="cuidados">Cuidados</string>
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
     <string name="versao">Enfermeiros v. 1.0</string>
@@ -22,6 +22,4 @@
     <string name="preencha_idade">Preencha a idade</string>
     <string name="preencha_sexo">Preencha o sexo</string>
     <string name="erro_inserir_enfermeiro">Erro ao inserir enfermeiro</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
