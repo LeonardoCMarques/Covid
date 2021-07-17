@@ -25,4 +25,6 @@
     <string name="erro_inserir_enfermeiro">Erro ao inserir enfermeiro</string>
     <string name="erro_alterar_enfermeiro">Erro ao alterar enfermeiro</string>
     <string name="enfermeiro_guardado_sucesso">Enfermeiro guardado com sucesso</string>
+    <string name="erro_eliminar_enfermeiro">Erro ao eliminar enfermeiro</string>
+    <string name="enfermeiro_eliminado_sucesso">Enfermeiro eliminado com sucesso</string>
 </resources>
