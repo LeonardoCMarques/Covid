@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Spinner
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import pt.ipg.covid.databinding.FragmentNovoEnfermeiroBinding
+import pt.ipg.livros.ContentProviderCovid
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -55,7 +57,43 @@ class NovoEnfermeiroFragment : Fragment() {
     }
 
     fun guardar() {
-        // todo: guardar enfermeiro
+        val nomeEnfermeiro = editTextNome.text.toString()
+        if (nomeEnfermeiro.isEmpty()) {
+            editTextNome.setError(getString(R.string.preencha_nome))
+            return
+        }
+
+        val idadeEnfermeiro = editTextIdade.text.toString()
+        if (idadeEnfermeiro.isEmpty()) {
+            editTextIdade.setError(getString(R.string.preencha_idade))
+            return
+        }
+
+        val sexoEnfermeiro = editTextSexo.text.toString()
+        if (sexoEnfermeiro.isEmpty()) {
+            editTextSexo.setError(getString(R.string.preencha_sexo))
+            return
+        }
+
+
+        val enfermeiro = Enfermeiro(nome = nomeEnfermeiro, dataNascimento = idadeEnfermeiro, sexo = sexoEnfermeiro)
+
+        val uri = activity?.contentResolver?.insert(
+            ContentProviderCovid.ENDERECO_TABELA_ENFERMEIRO,
+            enfermeiro.toContentValues()
+        )
+
+        if (uri == null) {
+            Snackbar.make(
+                editTextNome,
+                getString(R.string.erro_inserir_enfermeiro),
+                Snackbar.LENGTH_LONG
+            ).show()
+            return
+        }
+
+        navegaListaEnfermeiro()
+
     }
 
     fun processaOpcaoMenu(item: MenuItem): Boolean {
