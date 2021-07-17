@@ -8,10 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import pt.ipg.covid.databinding.FragmentNovoEnfermeiroBinding
-import pt.ipg.livros.ContentProviderCovid
+import pt.ipg.covid.ContentProviderCovid
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -95,6 +96,11 @@ class NovoEnfermeiroFragment : Fragment() {
             return
         }
 
+        Toast.makeText(
+            requireContext(),
+            R.string.enfermeiro_guardado_sucesso,
+            Toast.LENGTH_LONG
+        ).show()
         navegaListaEnfermeiro()
 
     }

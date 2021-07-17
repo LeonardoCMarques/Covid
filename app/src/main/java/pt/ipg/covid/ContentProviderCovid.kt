@@ -1,4 +1,4 @@
-package pt.ipg.livros
+package pt.ipg.covid
 
 import android.content.ContentProvider
 import android.content.ContentValues

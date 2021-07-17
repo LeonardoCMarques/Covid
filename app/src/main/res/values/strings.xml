@@ -22,4 +22,6 @@
     <string name="preencha_idade">Preencha a idade</string>
     <string name="preencha_sexo">Preencha o sexo</string>
     <string name="erro_inserir_enfermeiro">Erro ao inserir enfermeiro</string>
+    <string name="erro_alterar_enfermeiro">Erro ao alterar enfermeiro</string>
+    <string name="enfermeiro_guardado_sucesso">Enfermeiro guardado com sucesso</string>
 </resources>
