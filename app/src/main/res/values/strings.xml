@@ -18,7 +18,7 @@
     <string name="cancelar">Cancelar</string>
     <string name="versao">Enfermeiros v. 1.0</string>
     <string name="idade">Idade</string>
-    <setring name="sexo">Sexo</setring>
+    <string name="sexo">Sexo</string>
     <string name="preencha_nome">Preencha o nome</string>
     <string name="preencha_idade">Preencha a idade</string>
     <string name="preencha_sexo">Preencha o sexo</string>
