@@ -20,7 +20,7 @@
         android:textColor="@color/cor_destaque" />
 
     <TextView
-        android:id="@+id/textViewNomeEnfermeiro"
+        android:id="@+id/textViewEnfermeiroEliminaNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_ecran"
@@ -45,7 +45,7 @@
         android:textColor="@color/cor_destaque" />
 
     <TextView
-        android:id="@+id/textViewIdade"
+        android:id="@+id/textViewEnfermeiroEliminaIdade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_ecran"
@@ -70,7 +70,7 @@
         android:textColor="@color/cor_destaque" />
 
     <TextView
-        android:id="@+id/textViewCategoria"
+        android:id="@+id/textViewEnfermeirosEliminaSexo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_ecran"

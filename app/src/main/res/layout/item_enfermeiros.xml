@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textViewNomeEnfermeiro"
+        android:id="@+id/textViewEnfermeiroEliminaNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_campos"
@@ -18,7 +18,7 @@
         tools:text="Hugo" />
 
     <TextView
-        android:id="@+id/textViewIdade"
+        android:id="@+id/textViewEnfermeiroEliminaIdade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margem_campos"

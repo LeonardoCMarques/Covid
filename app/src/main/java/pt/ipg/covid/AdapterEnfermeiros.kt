@@ -17,8 +17,8 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
 
     class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
-        private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewNomeEnfermeiro)
-        private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewIdade)
+        private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewEnfermeiroEliminaNome)
+        private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewEnfermeiroEliminaIdade)
         private lateinit var enfermeiros: Enfermeiro
         init {
             itemView.setOnClickListener(this)

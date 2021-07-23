@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment"
             app:destination="@id/editaEnfermeiroFragment" />
+        <action
+            android:id="@+id/action_ListaEnfermeiroFragment_to_eliminaEnfermeiroFragment"
+            app:destination="@id/eliminaEnfermeiroFragment" />
     </fragment>
     <fragment
         android:id="@+id/novoEnfermeiroFragment"
@@ -33,6 +36,15 @@
         tools:layout="@layout/fragment_edita_enfermeiro" >
         <action
             android:id="@+id/action_editaEnfermeiroFragment_to_ListaEnfermeiroFragment"
+            app:destination="@id/ListaEnfermeiroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eliminaEnfermeiroFragment"
+        android:name="pt.ipg.covid.EliminaEnfermeiroFragment"
+        android:label="fragment_elimina_enfermeiro"
+        tools:layout="@layout/fragment_elimina_enfermeiro" >
+        <action
+            android:id="@+id/action_eliminaEnfermeiroFragment_to_ListaEnfermeiroFragment"
             app:destination="@id/ListaEnfermeiroFragment" />
     </fragment>
 </navigation>
