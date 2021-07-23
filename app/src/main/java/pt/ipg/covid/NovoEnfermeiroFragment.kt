@@ -7,12 +7,10 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.Spinner
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import pt.ipg.covid.databinding.FragmentNovoEnfermeiroBinding
-import pt.ipg.covid.ContentProviderCovid
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -44,9 +42,9 @@ class NovoEnfermeiroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        editTextNome = view.findViewById(R.id.editTextEnfermeiroNome)
-        editTextIdade = view.findViewById(R.id.editTextEnfermeiroIdade)
-        editTextSexo = view.findViewById(R.id.editTextEnfermeiroSexo)
+        editTextNome = view.findViewById(R.id.editTextEnfermeiroEditaNome)
+        editTextIdade = view.findViewById(R.id.editTextEnfermeiroEditaIdade)
+        editTextSexo = view.findViewById(R.id.editTextEnfermeiroEditaSexo)
     }
 
     override fun onDestroyView() {
@@ -54,7 +52,7 @@ class NovoEnfermeiroFragment : Fragment() {
         _binding = null
     }
     fun navegaListaEnfermeiro() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+        findNavController().navigate(R.id.action_novoEnfermeiroFragment_to_ListaEnfermeiroFragment)
     }
 
     fun guardar() {
@@ -80,7 +78,7 @@ class NovoEnfermeiroFragment : Fragment() {
         }
 
 
-        val enfermeiro = Enfermeiro(nome = nomeEnfermeiro, dataNascimento = idadeEnfermeiro, sexo = sexoEnfermeiro)
+        val enfermeiro = Enfermeiro(nome = nomeEnfermeiro, dataNascimento = idadeEnfermeiro.toInt(), sexo = sexoEnfermeiro)
 
         val uri = activity?.contentResolver?.insert(
             ContentProviderCovid.ENDERECO_TABELA_ENFERMEIRO,

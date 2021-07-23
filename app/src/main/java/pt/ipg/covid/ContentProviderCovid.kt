@@ -336,4 +336,5 @@ class ContentProviderCovid : ContentProvider() {
             return uriMatcher
         }
     }
+
 }

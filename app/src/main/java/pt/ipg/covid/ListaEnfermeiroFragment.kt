@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import pt.ipg.covid.databinding.FragmentListaEnfermeiroBinding
-import pt.ipg.livros.ContentProviderCovid
+
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -51,14 +51,14 @@ class ListaEnfermeiroFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor
             .initLoader(ID_LOADER_MANAGER_EFERMEIRO, null, this)
     }
     fun navegaNovoEnfermeiro() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_novoEnfermeiroFragment)
     }
     fun navegaAlterarEnfermeiro() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment)
     }
 
     fun navegaEliminarEnfermeiro() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
+        //findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment)
     }
 
     fun processaOpcaoMenu(item: MenuItem): Boolean {

@@ -10,32 +10,29 @@
         android:name="pt.ipg.covid.ListaEnfermeiroFragment"
         android:label="@string/lista_enfermeiro_fragment_label"
         tools:layout="@layout/fragment_lista_enfermeiro">
-
         <action
-            android:id="@+id/action_ListaEnfermeiroFragment_to_NovoEnfermeiroFragment"
-            app:destination="@id/NovoEnfermeiroFragment" />
+            android:id="@+id/action_ListaEnfermeiroFragment_to_novoEnfermeiroFragment"
+            app:destination="@id/novoEnfermeiroFragment" />
         <action
-            android:id="@+id/action_ListaEnfermeiroFragment_to_eliminaEnfermeiroFragment"
-            app:destination="@id/eliminaEnfermeiroFragment" />
+            android:id="@+id/action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment"
+            app:destination="@id/editaEnfermeiroFragment" />
     </fragment>
     <fragment
-        android:id="@+id/NovoEnfermeiroFragment"
+        android:id="@+id/novoEnfermeiroFragment"
         android:name="pt.ipg.covid.NovoEnfermeiroFragment"
-        android:label="@string/novo_enfermeiro_fragment_label"
+        android:label="@string/novo_enfermeiro"
         tools:layout="@layout/fragment_novo_enfermeiro">
-
         <action
-            android:id="@+id/action_cancelar_edita_enfermeiroFragment_to_ListaEnfermeiroFragment"
+            android:id="@+id/action_novoEnfermeiroFragment_to_ListaEnfermeiroFragment"
             app:destination="@id/ListaEnfermeiroFragment" />
     </fragment>
     <fragment
-        android:id="@+id/eliminaEnfermeiroFragment"
-        android:name="pt.ipg.covid.EliminaEnfermeiroFragment"
-        android:label="@string/elimina_enfermeiro_fragment_label"
-        tools:layout="@layout/fragment_elimina_enfermeiro" >
+        android:id="@+id/editaEnfermeiroFragment"
+        android:name="pt.ipg.covid.EditaEnfermeiroFragment"
+        android:label="fragment_edita_enfermeiro"
+        tools:layout="@layout/fragment_edita_enfermeiro" >
         <action
-            android:id="@+id/action_eliminaEnfermeiroFragment_to_listaEnfermeiroFragment"
-
+            android:id="@+id/action_editaEnfermeiroFragment_to_ListaEnfermeiroFragment"
             app:destination="@id/ListaEnfermeiroFragment" />
     </fragment>
 </navigation>

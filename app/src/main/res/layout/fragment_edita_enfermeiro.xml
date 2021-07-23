@@ -9,39 +9,37 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextEnfermeiroNome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enfermeiro"
-        android:inputType="textLongMessage|textAutoComplete" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEnfermeiroIdade"
+            android:id="@+id/editTextEnfermeiroEditaNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margem_campos"
-            android:hint="@string/data_de_nascimento"
+            android:hint="@string/enfermeiro"
             android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_campos"
-            android:text="@string/cuidados" />
-
-        <Spinner
-            android:id="@+id/spinnerCategorias"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_campos" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEnfermeiroEditaIdade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/idade" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEnfermeiroEditaSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sexo" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
