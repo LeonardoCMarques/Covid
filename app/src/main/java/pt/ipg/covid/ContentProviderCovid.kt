@@ -130,8 +130,7 @@ class ContentProviderCovid : ContentProvider() {
                 null,
                 sortOrder
             )
-
-            URI_UTENTE -> TabelaUtentes(bd).query(
+            URI_ENFERMEIRO_ESPECIFICO -> TabelaEnfermeiros(bd).query(
                 projection as Array<String>,
                 "${BaseColumns._ID}=?",
                 arrayOf(uri.lastPathSegment!!),
@@ -140,7 +139,31 @@ class ContentProviderCovid : ContentProvider() {
                 null
             )
 
+            URI_UTENTE -> TabelaUtentes(bd).query(
+                projection as Array<String>,
+                selection,
+                selectionArgs as Array<String>?,
+                null,
+                null,
+                sortOrder
+            )
+            URI_UTENTE_ESPECIFICO -> TabelaUtentes(bd).query(
+                projection as Array<String>,
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!),
+                null,
+                null,
+                null
+            )
             URI_CUIDADO -> TabelaCuidados(bd).query(
+                projection as Array<String>,
+                selection,
+                selectionArgs as Array<String>?,
+                null,
+                null,
+                sortOrder
+            )
+            URI_CUIDADO_ESPECIFICO -> TabelaCuidados(bd).query(
                 projection as Array<String>,
                 "${BaseColumns._ID}=?",
                 arrayOf(uri.lastPathSegment!!),

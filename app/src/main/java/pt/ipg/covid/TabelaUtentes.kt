@@ -27,7 +27,7 @@ class TabelaUtentes(db: SQLiteDatabase) {
     fun query(
         columns: Array<String>,
         selection: String?,
-        selectionArgs: Array<String?>,
+        selectionArgs: Array<String>?,
         groupBy: String?,
         having: String?,
         orderBy: String?
