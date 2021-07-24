@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_novo_cuidado"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/novo_cuidado"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_alterar_cuidado"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/alterar_cuidado"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_eliminar_cuidado"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/eliminar_cuidado"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

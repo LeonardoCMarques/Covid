@@ -7,11 +7,21 @@
     <string name="edita_enfermeiro_fragment_label">Editar enfermeiro</string>
     <string name="elimina_enfermeiro_fragment_label">Eliminar enfermeiro?</string>
 
+    <string name="lista_cuidados_fragment_label">Cuidados</string>
+    <string name="novo_cuidado_fragment_label">Novo Cuidado</string>
+    <string name="edita_cuidado_fragment_label">Edita Cuidado</string>
+    <string name="elimina_cuidado_fragment_label">Eliminar Cuidado?</string>
+
 
     <string name="novo_enfermeiro">Novo enfermeiro</string>
     <string name="alterar_enfermeiro">Alterar enfermeiro</string>
     <string name="eliminar_enfermeiro">Eliminar enfermeiro</string>
-    <string name="enfermeiro">Nome</string>
+
+    <string name="novo_cuidado">Novo Cuidado</string>
+    <string name="alterar_cuidado">Alterar Cuidado</string>
+    <string name="eliminar_cuidado">Eliminar Cuidado</string>
+
+    <string name="nome_enfermeiro">Nome</string>
     <string name="data_de_nascimento">Idade</string>
     <string name="cuidados">Cuidados</string>
     <string name="guardar">Guardar</string>

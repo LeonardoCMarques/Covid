@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textViewEnfermeiroNome"
+        android:id="@+id/textViewNomeCuidados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_campos"
@@ -15,22 +15,21 @@
         android:layout_marginEnd="@dimen/margem_campos"
         android:layout_marginRight="@dimen/margem_campos"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:text="Hugo" />
+        tools:text="Cuidados Intensivos" />
 
     <TextView
-        android:id="@+id/textViewEnfermeiroIdade"
+        android:id="@+id/textViewCamasOcupadas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margem_campos"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        tools:text="27" />
+        tools:text="0" />
 
     <TextView
-        android:id="@+id/textViewEnfermeiroSexo"
+        android:id="@+id/textViewCamasDisponiveis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margem_campos"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        tools:text="Masculino" />
-
+        tools:text="0" />
 </LinearLayout>

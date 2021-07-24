@@ -9,5 +9,6 @@ class DadosApp {
         lateinit var fragment: Fragment
 
         var enfermeiroSelecionado : Enfermeiro? = null
+        var cuidadoSelecionado : Cuidados? = null
     }
 }

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.Adapter<AdapterEnfermeiros.ViewHolderEnfermeiros>() {
+class AdapterCuidados(val fragment: ListaCuidadosFragment) : RecyclerView.Adapter<AdapterCuidados.ViewHolderCuidados>() {
 
     public var cursor: Cursor? = null
         get() = field
@@ -15,20 +15,22 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
             notifyDataSetChanged()
         }
 
-    class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    class ViewHolderCuidados(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
-        private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewEnfermeiroEliminaNome)
-        private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewCamasOcupadas)
-        private lateinit var enfermeiros: Enfermeiro
+        private val textViewNomeCuidados = itemView.findViewById<TextView>(R.id.textViewEnfermeiroEliminaNome)
+        private val textViewCamasOcupadas = itemView.findViewById<TextView>(R.id.textViewCamasOcupadas)
+        private val textViewCamasDisponiveis = itemView.findViewById<TextView>(R.id.textViewCamasDisponiveis)
+        private lateinit var cuidados: Cuidados
         init {
             itemView.setOnClickListener(this)
         }
 
-        fun atualizaEnfermeiros(enfermeiros: Enfermeiro) {
-            this.enfermeiros = enfermeiros
+        fun atualizaCuidados(cuidados: Cuidados) {
+            this.cuidados = cuidados
 
-            textViewNomeEnfermeiros.text = enfermeiros.nome
-            textViewIdade.text = enfermeiros.dataNascimento.toString()
+            textViewNomeCuidados.text = cuidados.nome
+            textViewCamasOcupadas.text = cuidados.ocupadas
+            textViewCamasDisponiveis.text = cuidados.disponiveis
         }
 
         /**
@@ -44,8 +46,8 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
         private fun seleciona() {
             selecionado = this
             itemView.setBackgroundResource(R.color.cor_selecao)
-            DadosApp.enfermeiroSelecionado = enfermeiros
-            DadosApp.activity.atualizaMenuListaEnfermeiros(true)
+            DadosApp.cuidadoSelecionado = cuidados
+            DadosApp.activity.atualizaMenuListaCuidados(true)
         }
 
         private fun desSeleciona() {
@@ -54,7 +56,7 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
         }
 
         companion object {
-            var selecionado : ViewHolderEnfermeiros? = null
+            var selecionado : ViewHolderCuidados? = null
         }
 
     }
@@ -82,10 +84,10 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
      * @see .getItemViewType
      * @see .onBindViewHolder
      */
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderEnfermeiros {
-        val itemEnfermeiros = fragment.layoutInflater.inflate(R.layout.item_enfermeiros, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderCuidados {
+        val itemCuidados = fragment.layoutInflater.inflate(R.layout.item_cuidados, parent, false)
 
-        return ViewHolderEnfermeiros(itemEnfermeiros)
+        return ViewHolderCuidados(itemCuidados)
     }
 
     /**
@@ -109,9 +111,9 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
      * item at the given position in the data set.
      * @param position The position of the item within the adapter's data set.
      */
-    override fun onBindViewHolder(holder: ViewHolderEnfermeiros, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolderCuidados, position: Int) {
         cursor!!.moveToPosition(position)
-        holder.atualizaEnfermeiros(Enfermeiro.fromCursor(cursor!!))
+        holder.atualizaCuidados(Cuidados.fromCursor(cursor!!))
     }
 
     /**

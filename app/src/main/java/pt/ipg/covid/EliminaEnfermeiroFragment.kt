@@ -33,7 +33,7 @@ class EliminaEnfermeiroFragment : Fragment() {
 
         textViewNome = view.findViewById(R.id.textViewEnfermeiroEliminaNome)
         textViewIdade = view.findViewById(R.id.textViewEnfermeiroEliminaIdade)
-        textViewSexo = view.findViewById(R.id.textViewEnfermeirosEliminaSexo)
+        textViewSexo = view.findViewById(R.id.textViewEnfermeiroEliminaSexo)
 
         val enfermeiro = DadosApp.enfermeiroSelecionado!!
         textViewNome.setText(enfermeiro.nome)
