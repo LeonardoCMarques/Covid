@@ -17,8 +17,9 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
 
     class ViewHolderEnfermeiros(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
-        private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewEnfermeiroEliminaNome)
-        private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewCamasOcupadas)
+        private val textViewNomeEnfermeiros = itemView.findViewById<TextView>(R.id.textViewEnfermeiroNome)
+        private val textViewIdade = itemView.findViewById<TextView>(R.id.textViewEnfermeiroIdade)
+        private val textViewSexo = itemView.findViewById<TextView>(R.id.textViewEnfermeiroSexo)
         private lateinit var enfermeiros: Enfermeiro
         init {
             itemView.setOnClickListener(this)
@@ -29,6 +30,7 @@ class AdapterEnfermeiros(val fragment: ListaEnfermeiroFragment) : RecyclerView.A
 
             textViewNomeEnfermeiros.text = enfermeiros.nome
             textViewIdade.text = enfermeiros.dataNascimento.toString()
+            textViewSexo.text = enfermeiros.sexo
         }
 
         /**

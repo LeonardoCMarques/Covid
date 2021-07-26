@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EliminaEnfermeiroFragment" >
+    tools:context=".EliminaCuidadoFragment" >
 
     <TextView
         android:id="@+id/textView2"
@@ -15,12 +15,12 @@
         android:layout_marginTop="@dimen/margem_ecran"
         android:layout_marginEnd="@dimen/margem_ecran"
         android:layout_marginRight="@dimen/margem_ecran"
-        android:text="@string/nome_enfermeiro"
+        android:text="@string/nome_cuidado"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/cor_destaque" />
 
     <TextView
-        android:id="@+id/textViewEnfermeiroEliminaNome"
+        android:id="@+id/textViewCuidadoEliminaCuidado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_ecran"
@@ -28,7 +28,7 @@
         android:layout_marginTop="@dimen/margem_campos"
         android:layout_marginEnd="@dimen/margem_ecran"
         android:layout_marginRight="@dimen/margem_ecran"
-        tools:text="Hugo"
+        tools:text="Cuidados intensivos"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
@@ -40,12 +40,12 @@
         android:layout_marginTop="@dimen/margem_campos"
         android:layout_marginEnd="@dimen/margem_ecran"
         android:layout_marginRight="@dimen/margem_ecran"
-        android:text="@string/idade"
+        android:text="@string/camasOcupadas"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/cor_destaque" />
 
     <TextView
-        android:id="@+id/textViewEnfermeiroEliminaIdade"
+        android:id="@+id/textViewCuidadoEliminaCamaOcupada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_ecran"
@@ -53,7 +53,7 @@
         android:layout_marginTop="@dimen/margem_campos"
         android:layout_marginEnd="@dimen/margem_ecran"
         android:layout_marginRight="@dimen/margem_ecran"
-        tools:text="27"
+        tools:text="15"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
@@ -65,12 +65,12 @@
         android:layout_marginTop="@dimen/margem_campos"
         android:layout_marginEnd="@dimen/margem_ecran"
         android:layout_marginRight="@dimen/margem_ecran"
-        android:text="@string/sexo"
+        android:text="@string/camasDisponiveis"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/cor_destaque" />
 
     <TextView
-        android:id="@+id/textViewEnfermeiroEliminaSexo"
+        android:id="@+id/textViewCuidadoEliminaCamaDisponivel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margem_ecran"
@@ -78,7 +78,7 @@
         android:layout_marginTop="@dimen/margem_campos"
         android:layout_marginEnd="@dimen/margem_ecran"
         android:layout_marginRight="@dimen/margem_ecran"
-        tools:text="Masculino"
+        tools:text="5"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-</LinearLayout>
 
+</LinearLayout>

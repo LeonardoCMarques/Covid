@@ -23,12 +23,24 @@
 
     <string name="nome_enfermeiro">Nome</string>
     <string name="data_de_nascimento">Idade</string>
-    <string name="cuidados">Cuidados</string>
+    <string name="sexo">Sexo</string>
+
+    <string name="nome_cuidado">Cuidado</string>
+    <string name="camasOcupadas">Camas Ocupadas</string>
+    <string name="camasDisponiveis">Camas Disponiveis</string>
+    <string name="erro_inserir_nome_cuidado">Erro ao inserir nome de cuidado</string>
+    <string name="cuidado_guardado_sucesso">Cuidado guardado com sucesso</string>
+    <string name="erro_eliminar_cuidado">Erro ao eliminar cuidado</string>
+    <string name="cuidado_eliminado_sucesso">Cuidado eliminado com sucesso</string>
+
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
     <string name="versao">Enfermeiros v. 1.0</string>
     <string name="idade">Idade</string>
-    <string name="sexo">Sexo</string>
+
+    <string name="preencha_campo">Por preencher</string>
+    <string name="erro_alterar_cuidados">Erro ao alterar cuidados</string>
+
     <string name="preencha_nome">Preencha o nome</string>
     <string name="preencha_idade">Preencha a idade</string>
     <string name="preencha_sexo">Preencha o sexo</string>
@@ -37,4 +49,7 @@
     <string name="enfermeiro_guardado_sucesso">Enfermeiro guardado com sucesso</string>
     <string name="erro_eliminar_enfermeiro">Erro ao eliminar enfermeiro</string>
     <string name="enfermeiro_eliminado_sucesso">Enfermeiro eliminado com sucesso</string>
+    <string name="enfermeiros">Enfermeiros</string>
+    <string name="cuidados">Cuidados</string>
+    <string name="utentes">Utentes</string>
 </resources>

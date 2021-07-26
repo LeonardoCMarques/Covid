@@ -17,7 +17,7 @@ class AdapterCuidados(val fragment: ListaCuidadosFragment) : RecyclerView.Adapte
 
     class ViewHolderCuidados(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
-        private val textViewNomeCuidados = itemView.findViewById<TextView>(R.id.textViewEnfermeiroEliminaNome)
+        private val textViewNomeCuidados = itemView.findViewById<TextView>(R.id.textViewNomeCuidados)
         private val textViewCamasOcupadas = itemView.findViewById<TextView>(R.id.textViewCamasOcupadas)
         private val textViewCamasDisponiveis = itemView.findViewById<TextView>(R.id.textViewCamasDisponiveis)
         private lateinit var cuidados: Cuidados

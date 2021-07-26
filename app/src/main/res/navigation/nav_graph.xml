@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/ListaEnfermeiroFragment">
+    app:startDestination="@id/mainPage">
 
     <fragment
         android:id="@+id/ListaEnfermeiroFragment"
@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_ListaEnfermeiroFragment_to_eliminaEnfermeiroFragment"
             app:destination="@id/eliminaEnfermeiroFragment" />
+        <action
+            android:id="@+id/action_ListaEnfermeiroFragment_to_mainPage"
+            app:destination="@id/mainPage" />
     </fragment>
     <fragment
         android:id="@+id/novoEnfermeiroFragment"
@@ -51,5 +54,57 @@
         android:id="@+id/listaCuidadosFragment"
         android:name="pt.ipg.covid.ListaCuidadosFragment"
         android:label="fragment_lista_cuidados"
-        tools:layout="@layout/fragment_lista_cuidados" />
+        tools:layout="@layout/fragment_lista_cuidados" >
+        <action
+            android:id="@+id/action_listaCuidadosFragment_to_novoCuidadoFragment"
+            app:destination="@id/novoCuidadoFragment" />
+        <action
+            android:id="@+id/action_listaCuidadosFragment_to_editaCuidadosFragment"
+            app:destination="@id/editaCuidadosFragment" />
+        <action
+            android:id="@+id/action_listaCuidadosFragment_to_eliminaCuidadoFragment"
+            app:destination="@id/eliminaCuidadoFragment" />
+        <action
+            android:id="@+id/action_listaCuidadosFragment_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/novoCuidadoFragment"
+        android:name="pt.ipg.covid.NovoCuidadoFragment"
+        android:label="fragment_novo_cuidado"
+        tools:layout="@layout/fragment_novo_cuidado" >
+        <action
+            android:id="@+id/action_novoCuidadoFragment_to_listaCuidadosFragment"
+            app:destination="@id/listaCuidadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="pt.ipg.covid.MainPage"
+        android:label="MainPage"
+        tools:layout="@layout/fragment_main_activity">
+        <action
+            android:id="@+id/action_mainPage_to_ListaEnfermeiroFragment"
+            app:destination="@id/ListaEnfermeiroFragment" />
+        <action
+            android:id="@+id/action_mainPage_to_listaCuidadosFragment"
+            app:destination="@id/listaCuidadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editaCuidadosFragment"
+        android:name="pt.ipg.covid.EditaCuidadosFragment"
+        android:label="fragment_edita_cuidados"
+        tools:layout="@layout/fragment_edita_cuidados" >
+        <action
+            android:id="@+id/action_editaCuidadosFragment_to_listaCuidadosFragment"
+            app:destination="@id/listaCuidadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eliminaCuidadoFragment"
+        android:name="pt.ipg.covid.EliminaCuidadoFragment"
+        android:label="fragment_elimina_cuidado"
+        tools:layout="@layout/fragment_elimina_cuidado" >
+        <action
+            android:id="@+id/action_eliminaCuidadoFragment_to_listaCuidadosFragment"
+            app:destination="@id/listaCuidadosFragment" />
+    </fragment>
 </navigation>

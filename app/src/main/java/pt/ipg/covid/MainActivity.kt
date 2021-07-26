@@ -9,7 +9,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import pt.ipg.covid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -68,6 +70,9 @@ class MainActivity : AppCompatActivity() {
                 R.menu.menu_edita_enfermeiro -> (DadosApp.fragment as EditaEnfermeiroFragment).processaOpcaoMenu(item)
                 R.menu.menu_elimina_enfermeiro -> (DadosApp.fragment as EliminaEnfermeiroFragment).processaOpcaoMenu(item)
                 R.menu.menu_lista_cuidados -> (DadosApp.fragment as ListaCuidadosFragment).processaOpcaoMenu(item)
+                R.menu.menu_novo_cuidado -> (DadosApp.fragment as NovoCuidadoFragment).processaOpcaoMenu(item)
+                R.menu.menu_edita_cuidados -> (DadosApp.fragment as EditaCuidadosFragment).processaOpcaoMenu(item)
+                R.menu.menu_elimina_cuidado -> (DadosApp.fragment as EliminaCuidadoFragment).processaOpcaoMenu(item)
                 else -> false
             }
         }
@@ -88,6 +93,16 @@ class MainActivity : AppCompatActivity() {
     fun atualizaMenuListaCuidados(mostraBotoesAlterarEliminar: Boolean){
         menu.findItem(R.id.action_alterar_cuidado).setVisible(mostraBotoesAlterarEliminar)
         menu.findItem(R.id.action_eliminar_cuidado).setVisible(mostraBotoesAlterarEliminar)
+    }
+    fun navegaListaEnfermeiro(view: View) {
+        findNavController(view.id).navigate(R.id.action_mainPage_to_ListaEnfermeiroFragment)
+    }
+    fun navegaListaCuidados(view: View) {
+        findNavController(view.id).navigate(R.id.action_mainPage_to_listaCuidadosFragment)
+    }
+
+    fun navegaListaUtentes() {
+        //findNavController().navigate(R.id.action_main)
     }
 
 }

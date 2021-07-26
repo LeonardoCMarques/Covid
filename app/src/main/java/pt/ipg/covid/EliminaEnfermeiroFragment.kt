@@ -46,13 +46,13 @@ class EliminaEnfermeiroFragment : Fragment() {
     }
 
     fun elimina() {
-        val uriLivro = Uri.withAppendedPath(
+        val uriCovid = Uri.withAppendedPath(
             ContentProviderCovid.ENDERECO_TABELA_ENFERMEIRO,
             DadosApp.enfermeiroSelecionado!!.id.toString()
         )
 
         val registos = activity?.contentResolver?.delete(
-            uriLivro,
+            uriCovid,
             null,
             null
         )

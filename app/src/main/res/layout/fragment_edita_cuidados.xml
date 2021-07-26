@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NovoEnfermeiroFragment">
+    android:orientation="vertical"
+    tools:context=".EditaCuidadosFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEnfermeiroEditaNome"
+            android:id="@+id/editTextCuidadoNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margem_campos"
-            android:hint="@string/nome_enfermeiro"
+            android:hint="@string/nome_cuidado"
             android:inputType="textPersonName" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -23,10 +23,10 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEnfermeiroEditaIdade"
+                android:id="@+id/editTextCuidadoCamasOcupadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/data_de_nascimento" />
+                android:hint="@string/camasOcupadas" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -34,10 +34,10 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEnfermeiroEditaSexo"
+                android:id="@+id/editTextCuidadoCamasDisponiveis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/sexo" />
+                android:hint="@string/camasDisponiveis" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </com.google.android.material.textfield.TextInputLayout>

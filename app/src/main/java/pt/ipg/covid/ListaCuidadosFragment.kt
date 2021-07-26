@@ -48,14 +48,14 @@ class ListaCuidadosFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> 
             .initLoader(ID_LOADER_MANAGER_CUIDADOS, null, this)
     }
     fun navegaNovoCuidado() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment)
+        findNavController().navigate(R.id.action_listaCuidadosFragment_to_novoCuidadoFragment)
     }
     fun navegaAlterarCuidado() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment)
+        findNavController().navigate(R.id.action_listaCuidadosFragment_to_editaCuidadosFragment)
     }
 
     fun navegaEliminarCuidado() {
-        findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_eliminaEnfermeiroFragment)
+        findNavController().navigate(R.id.action_listaCuidadosFragment_to_eliminaCuidadoFragment)
     }
 
     fun processaOpcaoMenu(item: MenuItem): Boolean {
@@ -87,10 +87,10 @@ class ListaCuidadosFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> 
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<Cursor> {
         return CursorLoader(
             requireContext(),
-            ContentProviderCovid.ENDERECO_TABELA_ENFERMEIRO,
-            TabelaEnfermeiros.TODAS_COLUNAS,
+            ContentProviderCovid.ENDERECO_TABELA_CUIDADO,
+            TabelaCuidados.TODAS_COLUNAS,
             null, null,
-            TabelaEnfermeiros.CAMPO_NOME_ENFERMEIRO
+            TabelaCuidados.CAMPO_NOME_CUIDADO
         )
     }
 
