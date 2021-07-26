@@ -118,5 +118,17 @@
         <action
             android:id="@+id/action_listaUtentesFragment_to_mainPage"
             app:destination="@id/mainPage" />
+        <action
+            android:id="@+id/action_listaUtentesFragment_to_novoUtenteFragment"
+            app:destination="@id/novoUtenteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/novoUtenteFragment"
+        android:name="pt.ipg.covid.NovoUtenteFragment"
+        android:label="NovoUtenteFragment"
+        tools:layout="@layout/fragment_novo_utente" >
+        <action
+            android:id="@+id/action_novoUtenteFragment_to_listaUtentesFragment"
+            app:destination="@id/listaUtentesFragment" />
     </fragment>
 </navigation>

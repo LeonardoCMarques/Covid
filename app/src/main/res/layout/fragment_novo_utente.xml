@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NovoEnfermeiroFragment">
+    tools:context=".NovoEnfermeiroFragment"
+    android:orientation="horizontal">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEnfermeiroEditaNome"
+            android:id="@+id/editTextUtenteEditaNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margem_campos"
-            android:hint="@string/nome_enfermeiro"
+            android:hint="@string/nome_utente"
             android:inputType="textPersonName" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEnfermeiroEditaIdade"
+                android:id="@+id/editTextUtenteEditaIdade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/data_de_nascimento" />
@@ -34,11 +34,38 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEnfermeiroEditaSexo"
+                android:id="@+id/editTextUtenteEditaSexo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/sexo" />
+
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewUtenteCuidado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/selecionar_cuidado" />
+
+        <Spinner
+            android:id="@+id/spinnerCuidados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textViewUtenteEnfermeiroResponsavel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/selecionar_enfermeiro_respons_vel" />
+
+        <Spinner
+            android:id="@+id/spinnerResponsavel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

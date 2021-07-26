@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity() {
                 R.menu.menu_novo_cuidado -> (DadosApp.fragment as NovoCuidadoFragment).processaOpcaoMenu(item)
                 R.menu.menu_edita_cuidados -> (DadosApp.fragment as EditaCuidadosFragment).processaOpcaoMenu(item)
                 R.menu.menu_elimina_cuidado -> (DadosApp.fragment as EliminaCuidadoFragment).processaOpcaoMenu(item)
+                R.menu.menu_lista_utentes -> (DadosApp.fragment as ListaUtentesFragment).processaOpcaoMenu(item)
+                R.menu.menu_novo_utente -> (DadosApp.fragment as NovoUtenteFragment).processaOpcaoMenu(item)
                 else -> false
             }
         }
@@ -107,8 +109,8 @@ class MainActivity : AppCompatActivity() {
         findNavController(view.id).navigate(R.id.action_mainPage_to_listaCuidadosFragment)
     }
 
-    fun navegaListaUtentes() {
-        //findNavController().navigate(R.id.action_main)
+    fun navegaListaUtentes(view: View) {
+        findNavController(view.id).navigate(R.id.action_mainPage_to_listaUtentesFragment)
     }
 
 }

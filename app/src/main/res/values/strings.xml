@@ -21,6 +21,7 @@
     <string name="alterar_cuidado">Alterar Cuidado</string>
     <string name="eliminar_cuidado">Eliminar Cuidado</string>
 
+    <string name="nome_utente">Nome</string>
     <string name="novo_utente">Novo Utente</string>
     <string name="alterar_utente">Alterar Utente</string>
     <string name="eliminar_utente">Eliminar Utente</string>
@@ -36,6 +37,11 @@
     <string name="cuidado_guardado_sucesso">Cuidado guardado com sucesso</string>
     <string name="erro_eliminar_cuidado">Erro ao eliminar cuidado</string>
     <string name="cuidado_eliminado_sucesso">Cuidado eliminado com sucesso</string>
+
+    <string name="erro_inserir_utente">Erro ao inserir utente</string>
+    <string name="utente_guardado_sucesso">Utente guardado com sucesso</string>
+    <string name="erro_eliminar_utente">Erro ao eliminar utente</string>
+    <string name="utente_eliminado_sucesso">Utente eliminado com sucesso</string>
 
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
@@ -56,4 +62,7 @@
     <string name="enfermeiros">Enfermeiros</string>
     <string name="cuidados">Cuidados</string>
     <string name="utentes">Utentes</string>
+    <string name="selecionar_cuidado">Selecionar cuidado:</string>
+    <string name="textview">TextView</string>
+    <string name="selecionar_enfermeiro_respons_vel">Selecionar enfermeiro responsável:</string>
 </resources>

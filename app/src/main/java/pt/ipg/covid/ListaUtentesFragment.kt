@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import pt.ipg.covid.databinding.FragmentListaUtentesBinding
@@ -46,7 +47,7 @@ class ListaUtentesFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
             .initLoader(ID_LOADER_MANAGER_UTENTES, null, this)
     }
     fun navegaNovoUtente() {
-        //findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_novoEnfermeiroFragment)
+        findNavController().navigate(R.id.action_listaUtentesFragment_to_novoUtenteFragment)
     }
     fun navegaAlterarUtente() {
        // findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment)
