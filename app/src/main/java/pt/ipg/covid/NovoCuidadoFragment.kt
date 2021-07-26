@@ -55,19 +55,19 @@ class NovoCuidadoFragment : Fragment() {
 
     fun guardar() {
         val nomeCuidado = editTextNovoCuidadoNome.text.toString()
-        if (nomeCuidado.isEmpty()) {
+        if (nomeCuidado.trim().isEmpty()) {
             editTextNovoCuidadoNome.setError(getString(R.string.preencha_nome))
             editTextNovoCuidadoNome.requestFocus()
             return
         }
         val camasOcupadas = editTextNovoCuidadoCamasOcupadas.text.toString()
-        if (nomeCuidado.isEmpty()) {
+        if (nomeCuidado.trim().isEmpty()) {
             editTextNovoCuidadoCamasOcupadas.setError(getString(R.string.preencha_nome))
             editTextNovoCuidadoCamasOcupadas.requestFocus()
             return
         }
         val camasDisponiveis = editTextNovoCuidadoCamasDisponiveis.text.toString()
-        if (nomeCuidado.isEmpty()) {
+        if (nomeCuidado.trim().isEmpty()) {
             editTextNovoCuidadoCamasDisponiveis.setError(getString(R.string.preencha_nome))
             editTextNovoCuidadoCamasDisponiveis.requestFocus()
             return

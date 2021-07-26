@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margem_campos"
                 android:hint="@string/camasOcupadas"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margem_campos"
                     android:hint="@string/camasDisponiveis"
-                    android:inputType="textPersonName" />
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.textfield.TextInputLayout>
 

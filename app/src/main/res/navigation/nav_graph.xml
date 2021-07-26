@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/ListaEnfermeiroFragment"
         android:name="pt.ipg.covid.ListaEnfermeiroFragment"
-        android:label="@string/lista_enfermeiro_fragment_label"
+        android:label="Lista Enfermeiro"
         tools:layout="@layout/fragment_lista_enfermeiro">
         <action
             android:id="@+id/action_ListaEnfermeiroFragment_to_novoEnfermeiroFragment"
@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/novoEnfermeiroFragment"
         android:name="pt.ipg.covid.NovoEnfermeiroFragment"
-        android:label="@string/novo_enfermeiro"
+        android:label="Novo Enfermeiro"
         tools:layout="@layout/fragment_novo_enfermeiro">
         <action
             android:id="@+id/action_novoEnfermeiroFragment_to_ListaEnfermeiroFragment"
@@ -35,8 +35,8 @@
     <fragment
         android:id="@+id/editaEnfermeiroFragment"
         android:name="pt.ipg.covid.EditaEnfermeiroFragment"
-        android:label="fragment_edita_enfermeiro"
-        tools:layout="@layout/fragment_edita_enfermeiro" >
+        android:label="Edita Enfermeiro"
+        tools:layout="@layout/fragment_edita_enfermeiro">
         <action
             android:id="@+id/action_editaEnfermeiroFragment_to_ListaEnfermeiroFragment"
             app:destination="@id/ListaEnfermeiroFragment" />
@@ -44,8 +44,8 @@
     <fragment
         android:id="@+id/eliminaEnfermeiroFragment"
         android:name="pt.ipg.covid.EliminaEnfermeiroFragment"
-        android:label="fragment_elimina_enfermeiro"
-        tools:layout="@layout/fragment_elimina_enfermeiro" >
+        android:label="Elimina Enfermeiro"
+        tools:layout="@layout/fragment_elimina_enfermeiro">
         <action
             android:id="@+id/action_eliminaEnfermeiroFragment_to_ListaEnfermeiroFragment"
             app:destination="@id/ListaEnfermeiroFragment" />
@@ -53,8 +53,8 @@
     <fragment
         android:id="@+id/listaCuidadosFragment"
         android:name="pt.ipg.covid.ListaCuidadosFragment"
-        android:label="fragment_lista_cuidados"
-        tools:layout="@layout/fragment_lista_cuidados" >
+        android:label="Lista Cuidados"
+        tools:layout="@layout/fragment_lista_cuidados">
         <action
             android:id="@+id/action_listaCuidadosFragment_to_novoCuidadoFragment"
             app:destination="@id/novoCuidadoFragment" />
@@ -71,8 +71,8 @@
     <fragment
         android:id="@+id/novoCuidadoFragment"
         android:name="pt.ipg.covid.NovoCuidadoFragment"
-        android:label="fragment_novo_cuidado"
-        tools:layout="@layout/fragment_novo_cuidado" >
+        android:label="Novo Cuidado"
+        tools:layout="@layout/fragment_novo_cuidado">
         <action
             android:id="@+id/action_novoCuidadoFragment_to_listaCuidadosFragment"
             app:destination="@id/listaCuidadosFragment" />
@@ -95,8 +95,8 @@
     <fragment
         android:id="@+id/editaCuidadosFragment"
         android:name="pt.ipg.covid.EditaCuidadosFragment"
-        android:label="fragment_edita_cuidados"
-        tools:layout="@layout/fragment_edita_cuidados" >
+        android:label="Edita Cuidados"
+        tools:layout="@layout/fragment_edita_cuidados">
         <action
             android:id="@+id/action_editaCuidadosFragment_to_listaCuidadosFragment"
             app:destination="@id/listaCuidadosFragment" />
@@ -104,8 +104,8 @@
     <fragment
         android:id="@+id/eliminaCuidadoFragment"
         android:name="pt.ipg.covid.EliminaCuidadoFragment"
-        android:label="fragment_elimina_cuidado"
-        tools:layout="@layout/fragment_elimina_cuidado" >
+        android:label="Elimin Cuidado"
+        tools:layout="@layout/fragment_elimina_cuidado">
         <action
             android:id="@+id/action_eliminaCuidadoFragment_to_listaCuidadosFragment"
             app:destination="@id/listaCuidadosFragment" />
@@ -113,8 +113,8 @@
     <fragment
         android:id="@+id/listaUtentesFragment"
         android:name="pt.ipg.covid.ListaUtentesFragment"
-        android:label="fragment_lista_utentes"
-        tools:layout="@layout/fragment_lista_utentes" >
+        android:label="Lista Utentes"
+        tools:layout="@layout/fragment_lista_utentes">
         <action
             android:id="@+id/action_listaUtentesFragment_to_mainPage"
             app:destination="@id/mainPage" />
@@ -131,8 +131,8 @@
     <fragment
         android:id="@+id/novoUtenteFragment"
         android:name="pt.ipg.covid.NovoUtenteFragment"
-        android:label="NovoUtenteFragment"
-        tools:layout="@layout/fragment_novo_utente" >
+        android:label="Novo Utente"
+        tools:layout="@layout/fragment_novo_utente">
         <action
             android:id="@+id/action_novoUtenteFragment_to_listaUtentesFragment"
             app:destination="@id/listaUtentesFragment" />
@@ -140,8 +140,8 @@
     <fragment
         android:id="@+id/editaUtenteFragment"
         android:name="pt.ipg.covid.EditaUtenteFragment"
-        android:label="EditaUtenteFragment"
-        tools:layout="@layout/fragment_edita_utente" >
+        android:label="Edita Utente"
+        tools:layout="@layout/fragment_edita_utente">
         <action
             android:id="@+id/action_editaUtenteFragment_to_listaUtentesFragment"
             app:destination="@id/listaUtentesFragment" />
@@ -149,8 +149,8 @@
     <fragment
         android:id="@+id/eliminaUtenteFragment"
         android:name="pt.ipg.covid.EliminaUtenteFragment"
-        android:label="fragment_elimina_utente"
-        tools:layout="@layout/fragment_elimina_utente" >
+        android:label="Elimina Utente"
+        tools:layout="@layout/fragment_elimina_utente">
         <action
             android:id="@+id/action_eliminaUtenteFragment_to_listaUtentesFragment"
             app:destination="@id/listaUtentesFragment" />

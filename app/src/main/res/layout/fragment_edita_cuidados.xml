@@ -26,7 +26,8 @@
                 android:id="@+id/editTextCuidadoCamasOcupadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/camasOcupadas" />
+                android:hint="@string/camasOcupadas"
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -37,7 +38,8 @@
                 android:id="@+id/editTextCuidadoCamasDisponiveis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/camasDisponiveis" />
+                android:hint="@string/camasDisponiveis"
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </com.google.android.material.textfield.TextInputLayout>

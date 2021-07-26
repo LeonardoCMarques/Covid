@@ -58,21 +58,21 @@ class EditaUtenteFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
 
     fun guardar() {
         val nome = editTextNome.text.toString()
-        if (nome.isEmpty()) {
+        if (nome.trim().isEmpty()) {
             editTextNome.setError(getString(R.string.preencha_nome))
             editTextNome.requestFocus()
             return
         }
 
         val idade = editTextIdade.text.toString()
-        if (idade.isEmpty()) {
+        if (idade.trim().isEmpty()) {
             editTextIdade.setError(getString(R.string.preencha_idade))
             editTextIdade.requestFocus()
             return
         }
 
         val sexo = editTextSexo.text.toString()
-        if (sexo.isEmpty()) {
+        if (sexo.trim().isEmpty()) {
             editTextSexo.setError(getString(R.string.preencha_sexo))
             editTextSexo.requestFocus()
             return
