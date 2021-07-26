@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EliminaUtenteFragment" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_ecran"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        android:text="@string/nome_utente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/cor_destaque" />
+
+    <TextView
+        android:id="@+id/textViewUtenteEliminaNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        tools:text="Fábio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        android:text="@string/idade"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/cor_destaque" />
+
+    <TextView
+        android:id="@+id/textViewUtenteEliminaIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        tools:text="27"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        android:text="@string/sexo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/cor_destaque" />
+
+    <TextView
+        android:id="@+id/textViewUtenteEliminaSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        tools:text="Masculino"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        android:text="@string/servicoInternamento"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/cor_destaque" />
+
+    <TextView
+        android:id="@+id/textViewUtenteEliminaServicoInternamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        tools:text="Cuidados intensivos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        android:text="@string/enfermeiroResponsavel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/cor_destaque" />
+
+    <TextView
+        android:id="@+id/textViewUtenteEliminaenfermeiroResponsavel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_ecran"
+        android:layout_marginLeft="@dimen/margem_ecran"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_ecran"
+        android:layout_marginRight="@dimen/margem_ecran"
+        tools:text="Hugo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+</LinearLayout>

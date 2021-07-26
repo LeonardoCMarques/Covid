@@ -54,7 +54,7 @@ class ListaUtentesFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
     }
 
     fun navegaEliminarUtente() {
-        //findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_eliminaEnfermeiroFragment)
+        findNavController().navigate(R.id.action_listaUtentesFragment_to_eliminaUtenteFragment)
     }
 
     fun processaOpcaoMenu(item: MenuItem): Boolean {
