@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewUtenteNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_campos"
+        android:layout_marginLeft="@dimen/margem_campos"
+        android:layout_marginTop="@dimen/margem_campos"
+        android:layout_marginEnd="@dimen/margem_campos"
+        android:layout_marginRight="@dimen/margem_campos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="Hugofdsfsd" />
+
+    <TextView
+        android:id="@+id/textViewUtenteIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_campos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        tools:text="2sdf7" />
+
+    <TextView
+        android:id="@+id/textViewUtenteSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_campos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        tools:text="Masculdsfdfino" />
+
+    <TextView
+        android:id="@+id/textViewUtenteServico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_campos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        tools:text="dsaada" />
+
+    <TextView
+        android:id="@+id/textViewUtenteEnfermeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_campos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        tools:text="olaola" />
+
+</LinearLayout>

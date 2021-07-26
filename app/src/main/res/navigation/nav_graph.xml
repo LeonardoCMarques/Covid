@@ -88,6 +88,9 @@
         <action
             android:id="@+id/action_mainPage_to_listaCuidadosFragment"
             app:destination="@id/listaCuidadosFragment" />
+        <action
+            android:id="@+id/action_mainPage_to_listaUtentesFragment"
+            app:destination="@id/listaUtentesFragment" />
     </fragment>
     <fragment
         android:id="@+id/editaCuidadosFragment"
@@ -106,5 +109,14 @@
         <action
             android:id="@+id/action_eliminaCuidadoFragment_to_listaCuidadosFragment"
             app:destination="@id/listaCuidadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaUtentesFragment"
+        android:name="pt.ipg.covid.ListaUtentesFragment"
+        android:label="fragment_lista_utentes"
+        tools:layout="@layout/fragment_lista_utentes" >
+        <action
+            android:id="@+id/action_listaUtentesFragment_to_mainPage"
+            app:destination="@id/mainPage" />
     </fragment>
 </navigation>

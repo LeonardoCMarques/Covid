@@ -94,6 +94,12 @@ class MainActivity : AppCompatActivity() {
         menu.findItem(R.id.action_alterar_cuidado).setVisible(mostraBotoesAlterarEliminar)
         menu.findItem(R.id.action_eliminar_cuidado).setVisible(mostraBotoesAlterarEliminar)
     }
+
+    fun atualizaMenuListaUtentes(mostraBotoesAlterarEliminar: Boolean){
+        menu.findItem(R.id.action_alterar_utente).setVisible(mostraBotoesAlterarEliminar)
+        menu.findItem(R.id.action_eliminar_utente).setVisible(mostraBotoesAlterarEliminar)
+    }
+
     fun navegaListaEnfermeiro(view: View) {
         findNavController(view.id).navigate(R.id.action_mainPage_to_ListaEnfermeiroFragment)
     }

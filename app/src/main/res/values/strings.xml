@@ -21,6 +21,10 @@
     <string name="alterar_cuidado">Alterar Cuidado</string>
     <string name="eliminar_cuidado">Eliminar Cuidado</string>
 
+    <string name="novo_utente">Novo Utente</string>
+    <string name="alterar_utente">Alterar Utente</string>
+    <string name="eliminar_utente">Eliminar Utente</string>
+
     <string name="nome_enfermeiro">Nome</string>
     <string name="data_de_nascimento">Idade</string>
     <string name="sexo">Sexo</string>
