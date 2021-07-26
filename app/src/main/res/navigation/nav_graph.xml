@@ -121,6 +121,9 @@
         <action
             android:id="@+id/action_listaUtentesFragment_to_novoUtenteFragment"
             app:destination="@id/novoUtenteFragment" />
+        <action
+            android:id="@+id/action_listaUtentesFragment_to_editaUtenteFragment"
+            app:destination="@id/editaUtenteFragment" />
     </fragment>
     <fragment
         android:id="@+id/novoUtenteFragment"
@@ -129,6 +132,15 @@
         tools:layout="@layout/fragment_novo_utente" >
         <action
             android:id="@+id/action_novoUtenteFragment_to_listaUtentesFragment"
+            app:destination="@id/listaUtentesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editaUtenteFragment"
+        android:name="pt.ipg.covid.EditaUtenteFragment"
+        android:label="EditaUtenteFragment"
+        tools:layout="@layout/fragment_edita_utente" >
+        <action
+            android:id="@+id/action_editaUtenteFragment_to_listaUtentesFragment"
             app:destination="@id/listaUtentesFragment" />
     </fragment>
 </navigation>

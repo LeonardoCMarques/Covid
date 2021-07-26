@@ -50,7 +50,7 @@ class ListaUtentesFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         findNavController().navigate(R.id.action_listaUtentesFragment_to_novoUtenteFragment)
     }
     fun navegaAlterarUtente() {
-       // findNavController().navigate(R.id.action_ListaEnfermeiroFragment_to_editaEnfermeiroFragment)
+        findNavController().navigate(R.id.action_listaUtentesFragment_to_editaUtenteFragment)
     }
 
     fun navegaEliminarUtente() {
